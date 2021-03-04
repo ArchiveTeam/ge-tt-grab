@@ -177,6 +177,9 @@ wget.callbacks.get_urls = function(file, url, is_css, iri)
         check("http://ge.tt/" .. item_value .. "/v/" .. d["fileid"])
         check("http://ge.tt/m/" .. item_value .. "/v/" .. d["fileid"] .. "/")
         check("http://api.ge.tt/1/files/" .. item_value .. "/" .. d["fileid"] .. "/blob?download")
+        check("http://api.ge.tt/1/files/" .. item_value .. "/" .. d["fileid"] .. "/blob")
+        check("http://api.ge.tt/1/files/" .. item_value .. "/" .. d["fileid"] .. "/blob/thumb")
+        check("http://api.ge.tt/1/files/" .. item_value .. "/" .. d["fileid"])
         if d["type"] == "application/pdf" then
           check("http://proxy.ge.tt/1/files/" .. item_value .. "/" .. d["fileid"] .. "/blob?referrer=" .. data["userid"] .. "&pdf")
         end
